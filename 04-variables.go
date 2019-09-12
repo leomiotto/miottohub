@@ -8,4 +8,6 @@ func main() {
 	c, python, java := true, false, "no!"
 
 	fmt.Println(i, j, k, c, python, java)
+	var x string = string(a)
+	fmt.Printf("Type: %T Value: %v\n", i, j) //Printf preciso especificar variáveis
 }
