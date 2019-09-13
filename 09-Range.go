@@ -11,3 +11,7 @@ func main(){
 		fmt.Printf("%d\n", value)
 	}
 }
+	v := make([][]uint8, 256)
+	for i:=0 ; i<dy ; i++{
+		v[i] = make([]uint8, 256)
+	}
