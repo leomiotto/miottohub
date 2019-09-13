@@ -10,17 +10,17 @@ func main() {
 	var a [2]string
 	a[0] = "Hello"   //Arrays cannot be resized.
 	a[1] = "World"
-	fmt.Println(a[0], a[1])
-	fmt.Println(a)
+	fmt.Println("Linha 13 ", a[0], a[1])
+	fmt.Println("Linha 14 ", a)
 
 	primes := [6]int{2, 3, 5, 7, 11, 13}
-	fmt.Println(primes)
+	fmt.Println("Linha 17 ", primes)
     
     
     //Slices
 	primes1 := [6]int{2, 3, 5, 7, 11, 13}   //A slice is a dynamically-sized, flexible view into the elements of an array.
 	var s []int = primes1[1:6]   //Slice não armazena dados, só referencia um vetor
-	fmt.Println(s)
+	fmt.Println("Linha 23 ", s)
     
     names := [4]string{
 		"John",
@@ -28,15 +28,15 @@ func main() {
 		"George",
 		"Ringo",
 	}
-	fmt.Println(names)   //[John Paul George Ringo]
+	fmt.Println("Linha 31 ", names)   //[John Paul George Ringo]
 
 	a1 := names[0:2]   //Slice pega a posição 0 mas não a posição 2 (sempre inclui o primeiro e exclui o último)
 	b := names[1:3]
-	fmt.Println(a1, b)   //[John Paul] [Paul George]
+	fmt.Println("Linha 35 ", a1, b)   //[John Paul] [Paul George]
 
 	b[0] = "XXX"
-	fmt.Println(a1, b)   //[John XXX] [XXX George]
-	fmt.Println(names)   //[John XXX George Ringo]
+	fmt.Println("Linha 38 ", a1, b)   //[John XXX] [XXX George]
+	fmt.Println("Linha 39 ", names)   //[John XXX George Ringo]
     
     //Slice Literal; ele cria um array(tamanho fixo) já o referenciando
     s1 := []struct {
@@ -50,7 +50,7 @@ func main() {
 		{11, false},
 		{13, true},
 	}
-	fmt.Println(s1)
+	fmt.Println("Linha 53 ", s1)
     
     //Slice com a função make; cria array com zeros e slice referenciando
     b2 := make([]int, 0, 5)   // len(b)=0, cap(b)=5
