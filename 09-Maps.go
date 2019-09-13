@@ -36,3 +36,4 @@ func main(){
 	fmt.Println("Localização:",m["Joinville"], m["Floripa"])
 }
 
+//delete(from where, "what")
