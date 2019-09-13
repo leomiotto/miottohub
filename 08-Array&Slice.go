@@ -3,6 +3,7 @@ package main
 import (
     "fmt"
     "strings"   //Linha 76
+)
 
 func main() {
     //Arrays
@@ -17,8 +18,8 @@ func main() {
     
     
     //Slices
-    primes := [6]int{2, 3, 5, 7, 11, 13}   //A slice is a dynamically-sized, flexible view into the elements of an array.
-	var s []int = primes[1:6]   //Slice não armazena dados, só referencia um vetor
+	primes1 := [6]int{2, 3, 5, 7, 11, 13}   //A slice is a dynamically-sized, flexible view into the elements of an array.
+	var s []int = primes1[1:6]   //Slice não armazena dados, só referencia um vetor
 	fmt.Println(s)
     
     names := [4]string{
@@ -29,16 +30,16 @@ func main() {
 	}
 	fmt.Println(names)   //[John Paul George Ringo]
 
-	a := names[0:2]   //Slice pega a posição 0 mas não a posição 2 (sempre inclui o primeiro e exclui o último)
+	a1 := names[0:2]   //Slice pega a posição 0 mas não a posição 2 (sempre inclui o primeiro e exclui o último)
 	b := names[1:3]
-	fmt.Println(a, b)   //[John Paul] [Paul George]
+	fmt.Println(a1, b)   //[John Paul] [Paul George]
 
 	b[0] = "XXX"
-	fmt.Println(a, b)   //[John XXX] [XXX George]
+	fmt.Println(a1, b)   //[John XXX] [XXX George]
 	fmt.Println(names)   //[John XXX George Ringo]
     
     //Slice Literal; ele cria um array(tamanho fixo) já o referenciando
-    s := []struct {
+    s1 := []struct {
 		i int
 		b bool
 	}{   //Vai criar um array (var s [6]struct)
@@ -49,13 +50,13 @@ func main() {
 		{11, false},
 		{13, true},
 	}
-	fmt.Println(s)
+	fmt.Println(s1)
     
     //Slice com a função make; cria array com zeros e slice referenciando
-    b := make([]int, 0, 5)   // len(b)=0, cap(b)=5
+    b2 := make([]int, 0, 5)   // len(b)=0, cap(b)=5
 
-    b = b[:cap(b)]   // len(b)=5, cap(b)=5
-    b = b[1:]      // len(b)=4, cap(b)=4
+    b2 = b2[:cap(b)]   // len(b)=5, cap(b)=5
+    b2 = b2[1:]      // len(b)=4, cap(b)=4
     
     
     // Create a tic-tac-toe board.
