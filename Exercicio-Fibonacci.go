@@ -7,18 +7,20 @@ import "fmt"
 func fibonacci() func() int {
 	first, second := 0, 1
 	return func() int{
-		ret := first
+		aux := first
 		first = second
-		second = first + second
+		second = aux + second
 		
-		return ret
+		return first
 	}
 	
 }
 
 func main() {
+	n := 5
 	f := fibonacci()
-	for i := 0; i < 10; i++ {
+	
+	for i := 0; i < n; i++ {
 		fmt.Println(f())
 	}
 }
